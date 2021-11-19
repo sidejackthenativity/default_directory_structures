@@ -13,6 +13,7 @@ _/etc/apache2/_
 │   ├── other-vhosts-access-log.conf
 │   ├── security.conf
 │   └── serve-cgi-bin.conf
+├── conf.d                 (directory for controlling specific aspects of the Apache configuration. Such as, SSL configuration and default security choices)
 ├── conf-enabled
 │   ├── charset.conf -> ../conf-available/charset.conf
 │   ├── javascript-common.conf -> ../conf-available/javascript-common.conf
@@ -198,10 +199,10 @@ _/etc/apache2/_
 │   ├── setenvif.load -> ../mods-available/setenvif.load
 │   ├── status.conf -> ../mods-available/status.conf
 │   └── status.load -> ../mods-available/status.load
-├── ports.conf                                                  (specifies ports that virtual hosts should listen on)
-├── sites-available
+├── ports.conf                                          (specifies ports that virtual hosts should listen on)
+├── sites-available                                     (has all the virtual hosts. Knows what to serve up for each request)
 │   ├── 000-default.conf
 │   └── default-ssl.conf
-└── sites-enabled
-    └── 000-default.conf -> ../sites-available/000-default.conf
+└── sites-enabled                                      (establishes which virtual hosts are in use. Usually sym links to files in the sites-available dir)
+    └── 000-default.conf -> ../sites-available/000-default.conf   
    
