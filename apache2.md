@@ -23,7 +23,7 @@ _/etc/apache2/_
 │   └── serve-cgi-bin.conf -> ../conf-available/serve-cgi-bin.conf
 ├── envvars
 ├── magic
-├── mods-available
+├── mods-available                              (modules that are available but not necessarily loaded)
 │   ├── access_compat.load
 │   ├── actions.conf
 │   ├── actions.load
@@ -167,7 +167,7 @@ _/etc/apache2/_
 │   ├── usertrack.load
 │   ├── vhost_alias.load
 │   └── xml2enc.load
-├── mods-enabled
+├── mods-enabled                (modules that are loaded, sym links to the corresponding file in the mods-available folder)
 │   ├── access_compat.load -> ../mods-available/access_compat.load
 │   ├── alias.conf -> ../mods-available/alias.conf
 │   ├── alias.load -> ../mods-available/alias.load
