@@ -1,5 +1,11 @@
+    
+## Different OS/Distributions ##
+### -Linux ###
+#### --Ubuntu/Debian ####
+_/etc/apache2/_
+
 ```bash
-├── apache2.conf
+├── apache2.conf                                            (main config file. almost all configuration can be done from here)
 ├── conf-available
 │   ├── charset.conf
 │   ├── javascript-common.conf
@@ -192,11 +198,10 @@
 │   ├── setenvif.load -> ../mods-available/setenvif.load
 │   ├── status.conf -> ../mods-available/status.conf
 │   └── status.load -> ../mods-available/status.load
-├── ports.conf
+├── ports.conf                                                  (specifies ports that virtual hosts should listen on)
 ├── sites-available
 │   ├── 000-default.conf
 │   └── default-ssl.conf
 └── sites-enabled
     └── 000-default.conf -> ../sites-available/000-default.conf
-    ```
-    
+   
